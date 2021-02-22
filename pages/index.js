@@ -1,32 +1,39 @@
 import Head from 'next/head';
-import {
-  Heading,
-  Link,
-  Text,
-  Code,
-  Flex,
-  Box,
-  Stack,
-  useColorModeValue,
-  DarkMode,
-} from '@chakra-ui/react';
-import styles from '../styles/Home.module.css';
-import DarkModeSwitch from '../components/DarkModeSwitch';
+import { useColorMode, Heading, Text, Flex, Stack } from '@chakra-ui/react';
+import Container from '../components/Container';
 
-export default function Home() {
-  const color = useColorModeValue('red.500', 'white.100');
+export default function Index() {
+  const { colorMode } = useColorMode();
+  const colorSecondary = {
+    light: 'gray.700',
+    dark: 'gray.400',
+  };
   return (
-    <Stack as="main" align="center">
-      <Flex flexDirection="column" maxWidth="700px">
-        <Flex flexDirection="row" w="700px" pt={4} justify="space-between">
-          <DarkModeSwitch />
-          <Text color={color}>Home Page!!</Text>
+    <Container>
+      <Head>
+        <title>Sean Modd motherfuckers</title>
+      </Head>
+      <Stack
+        as="main"
+        spacing={8}
+        justifyContent="center"
+        alignItems="flex-start"
+        m="0 auto 4rem auto"
+        maxWidth="700px"
+        px={2}
+      >
+        <Flex
+          justifyContent="flex-start"
+          flexDirection="column"
+          alignItems="flex-start"
+          maxWidth="700px"
+        >
+          <Heading mb={2}>Hi, I'm Sean Modd you bastards.</Heading>
+          <Text color={colorSecondary[colorMode]}>
+            All the Lorem Ipsum shit goes right here...
+          </Text>
         </Flex>
-        <Heading as="h1" size="2xl" fontWeight="normal">
-          Hello World!
-        </Heading>
-        <Text mt={4}>Hello, again bro.</Text>
-      </Flex>
-    </Stack>
+      </Stack>
+    </Container>
   );
 }
