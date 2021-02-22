@@ -1,3 +1,17 @@
+# Chakra UI Baby
+###### https://react-2020.thinkific.com/courses/take/introduction-to-chakra-ui/lessons/10375444-chakra-ui-demo
+
+
+
+
+
+
+
+
+
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
