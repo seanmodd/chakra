@@ -1,5 +1,6 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Head from 'next/head';
+import { Heading, Link, Text, Code, Flex, Box } from '@chakra-ui/react';
+import styles from '../styles/Home.module.css';
 
 export default function Home() {
   return (
@@ -10,16 +11,40 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+        <Heading as="h1" size="2xl" mb="2">
+          Welcome to{' '}
+          <Link color="teal.500" href="https://nextjs.org">
+            Next.js!
+          </Link>
+        </Heading>
+        <Text fontSize="xl" mt="2">
+          Get started by editing <Code>pages/index.js</Code>
+        </Text>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+        <Flex
+          flexWrap="wrap"
+          alignItems="center"
+          justifyContent="center"
+          maxW="800px"
+          mt="10"
+        >
+          <Box
+            as="a"
+            href="https://nextjs.org/docs"
+            p="6"
+            m="4"
+            borderWidth="1px"
+            rounded="lg"
+            flexBasis={['auto', '45%']}
+          >
+            <Heading as="h3" size="lg" mb="2">
+              Documentation &rarr;
+            </Heading>
+            <Text fontSize="lg">
+              Discover and deploy boilerplate shit with Sean and Next.js.
+            </Text>
+          </Box>
 
-        <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
             <h3>Documentation &rarr;</h3>
             <p>Find in-depth information about Next.js features and API.</p>
@@ -47,7 +72,7 @@ export default function Home() {
               Instantly deploy your Next.js site to a public URL with Vercel.
             </p>
           </a>
-        </div>
+        </Flex>
       </main>
 
       <footer className={styles.footer}>
@@ -61,5 +86,5 @@ export default function Home() {
         </a>
       </footer>
     </div>
-  )
+  );
 }
