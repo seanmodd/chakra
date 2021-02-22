@@ -1,90 +1,32 @@
 import Head from 'next/head';
-import { Heading, Link, Text, Code, Flex, Box } from '@chakra-ui/react';
+import {
+  Heading,
+  Link,
+  Text,
+  Code,
+  Flex,
+  Box,
+  Stack,
+  useColorModeValue,
+  DarkMode,
+} from '@chakra-ui/react';
 import styles from '../styles/Home.module.css';
+import DarkModeSwitch from '../components/DarkModeSwitch';
 
 export default function Home() {
+  const color = useColorModeValue('red.500', 'white.100');
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
-        <Heading as="h1" size="2xl" mb="2">
-          Welcome to{' '}
-          <Link color="teal.500" href="https://nextjs.org">
-            Next.js!
-          </Link>
-        </Heading>
-        <Text fontSize="xl" mt="2">
-          Get started by editing <Code>pages/index.js</Code>
-        </Text>
-
-        <Flex
-          flexWrap="wrap"
-          alignItems="center"
-          justifyContent="center"
-          maxW="800px"
-          mt="10"
-        >
-          <Box
-            as="a"
-            href="https://nextjs.org/docs"
-            p="6"
-            m="4"
-            borderWidth="1px"
-            rounded="lg"
-            flexBasis={['auto', '45%']}
-          >
-            <Heading as="h3" size="lg" mb="2">
-              Documentation &rarr;
-            </Heading>
-            <Text fontSize="lg">
-              Discover and deploy boilerplate shit with Sean and Next.js.
-            </Text>
-          </Box>
-
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+    <Stack as="main" align="center">
+      <Flex flexDirection="column" maxWidth="700px">
+        <Flex flexDirection="row" w="700px" pt={4} justify="space-between">
+          <DarkModeSwitch />
+          <Text color={color}>Home Page!!</Text>
         </Flex>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
+        <Heading as="h1" size="2xl" fontWeight="normal">
+          Hello World!
+        </Heading>
+        <Text mt={4}>Hello, again bro.</Text>
+      </Flex>
+    </Stack>
   );
 }

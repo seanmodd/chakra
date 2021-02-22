@@ -1,5 +1,6 @@
 # Chakra UI Baby
 ###### https://react-2020.thinkific.com/courses/take/introduction-to-chakra-ui/lessons/10375444-chakra-ui-demo
+###### https://www.youtube.com/watch?v=zauiWxYbwPw
 
 
 
