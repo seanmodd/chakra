@@ -1,0 +1,19 @@
+[
+    {
+        "type": "Group",
+        "name": "snippet",
+        "parent_id": null,
+        "workspaceRoot": null,
+        "workspacePath": null,
+        "id": "oIaR5eZLGr4hmw2i"
+    },
+    {
+        "type": "File",
+        "name": "/Users/seanmodd/.vscode/extensions/dsznajder.es7-react-js-snippets-3.1.0/snippets/snippets.json",
+        "parent_id": "oIaR5eZLGr4hmw2i",
+        "fsPath": "/Users/seanmodd/.vscode/extensions/dsznajder.es7-react-js-snippets-3.1.0/snippets/snippets.json",
+        "workspaceRoot": null,
+        "workspacePath": null,
+        "id": "RJN6TrL17cVHM42l"
+    }
+]

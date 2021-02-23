@@ -9,7 +9,7 @@ import {
   Box,
 } from '@chakra-ui/react';
 import Container from '../components/Container';
-import List from './list';
+import ListContainer from '../components/List';
 
 export default function Index() {
   const { colorMode } = useColorMode();
@@ -46,8 +46,8 @@ export default function Index() {
             maxWidth="700px"
           >
             <Heading mb={2}>Hi, I'm Sean Modd you bastards.</Heading>
-            <List />
-            <Text color={colorSecondary[colorMode]}>
+            <ListContainer />
+            <Text color={colorSecondary[colorMode]} mt={4}>
               All the Lorem Ipsum shit goes right here...
             </Text>
           </Flex>
