@@ -49,6 +49,7 @@ function MyApp({ Component, pageProps }) {
             useSystemColorMode: true,
           }}
         />
+
         <GlobalStyle>
           <Component {...pageProps} />
         </GlobalStyle>

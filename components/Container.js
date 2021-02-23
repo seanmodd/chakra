@@ -1,5 +1,17 @@
 import React from 'react';
-import { useColorMode, Button, Flex, Box } from '@chakra-ui/react';
+import {
+  useColorMode,
+  Button,
+  Flex,
+  Box,
+  Textarea,
+  FormControl,
+  FormLabel,
+  Input,
+  FormHelperText,
+  FormErrorMessage,
+  IconButton,
+} from '@chakra-ui/react';
 import NextLink from 'next/link';
 import styled from '@emotion/styled';
 
@@ -19,8 +31,8 @@ const Container = ({ children }) => {
   };
 
   const navHoverBg = {
-    light: 'gray.600',
-    dark: 'gray.300',
+    light: 'gray.200',
+    dark: 'gray.700',
   };
 
   const StickyNav = styled(Flex)`
@@ -32,8 +44,9 @@ const Container = ({ children }) => {
   `;
 
   return (
-    <>
+    <div className="SEANDIV">
       <StickyNav
+        className="SEANNAV"
         flexDirection="row"
         justifyContent="space-between"
         alignItems="center"
@@ -48,7 +61,7 @@ const Container = ({ children }) => {
         mb={[0, 0, 8]}
         mx="auto"
       >
-        <Box>
+        <Box className="SEANBOX">
           <NextLink href="/" passHref>
             <Button
               as="a"
@@ -70,10 +83,12 @@ const Container = ({ children }) => {
             </Button>
           </NextLink>
         </Box>
+
         <DarkModeSwitch />
       </StickyNav>
       <Flex
         as="main"
+        className="SEANFLEXMAIN"
         justifyContent="center"
         flexDirection="column"
         bg={bgColor[colorMode]}
@@ -83,7 +98,27 @@ const Container = ({ children }) => {
       >
         {children}
       </Flex>
-    </>
+      <Flex
+        className="SEANFLEX"
+        height="auto"
+        width="auto"
+        backgroundColor={{ backgroundColor: navHoverBg[colorMode] }}
+        flexDirection="column"
+        justifyContent="center"
+        alignItems="center"
+        opacity={1}
+        minHeight="200px"
+      >
+        <FormControl className="SEANFORM" maxWidth="500px">
+          <FormLabel>Label</FormLabel>
+          <Input />
+          <Textarea mt={2} backgroundColor="cyan.500" />
+          <FormHelperText>Helper message</FormHelperText>
+          <FormErrorMessage>Error message</FormErrorMessage>
+        </FormControl>
+        <IconButton aria-label="icon" icon="copy" />
+      </Flex>
+    </div>
   );
 };
 
