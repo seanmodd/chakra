@@ -34,7 +34,7 @@ const ListStep2Container = () => (
   <ListStep2 items={['Learn React', 'Learn Next.js', '???', 'Profit']} />
 );
 
-// export default ListStep4Container;
+// export default ListStep2Container;
 
 // ! STEP 3 •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 class ListStep3 extends React.Component {

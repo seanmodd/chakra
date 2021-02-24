@@ -1,17 +1,16 @@
+# best video to understand react better: [MUSTWATCH](https://www.youtube.com/watch?v=uirRaVjRsf4&list=PLC3y8-rFHvwgg3vaYJgHGnModB54rxOk3&index=11)
+
+###### remember the shortcut of 'rconst' to get the constructor with state function setup!
+
+# must visit:
+
+###### https://marketplace.visualstudio.com/items?itemName=dbankier.vscode-quick-select
+
 # Chakra UI Baby
+
 ###### https://react-2020.thinkific.com/courses/take/introduction-to-chakra-ui/lessons/10375444-chakra-ui-demo
+
 ###### https://www.youtube.com/watch?v=zauiWxYbwPw
-
-
-
-
-
-
-
-
-
-
-
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 

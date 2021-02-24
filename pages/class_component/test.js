@@ -1,29 +1,42 @@
-/* eslint-disable prettier/prettier */
-/* eslint-disable react/destructuring-assignment */
-/* eslint-disable react/prop-types */
 import React, { Component } from 'react';
 
-class List extends Component {
 
-    render() {
+class List extends React.Component {
 
-        return (
-            <div>
-                {this.props.items.map((item) => (
-                    <li key={item}>{item}</li>
-                ))}
-          </div>
-        );
-
-    }
-
+    // constructor(props) {
+    //     super(props);
+    
+    //     this.state = {
+    //       filteredItems: this.props.items,
+    //     };
+    
+    //     // This binding is necessary to make `this` work in the callback
+    //     this.filterItems = this.filterItems.bind(this);
+    //   }
+    
+    //   filterItems(e) {
+    //     const searchValue = e.target.value;
+    //     const currentItems = [...this.props.items];
+    //     const matchingItems = currentItems.filter((item) =>
+    //       item.startsWith(searchValue)
+    //     );
+    
+    //     this.setState({
+    //       filteredItems: matchingItems,
+    //     });
+    //   }
+  render() {
+    return (
+      <ul>
+        {this.props.items.map((item) => (
+          <li key={item}>{item}</li>
+        ))}
+      </ul>
+    );
+  }
 }
 
-const ListComponent = () => (
-    <div>
-        <List items={['here', 'here', 'here', 'here']} />
-        {' '}
-  </div>
+const ListContainer = () => (
+  <List items={['motherfuckeriam here', 'and now im here', 'hey']} />
 );
-console.log('Here')
-export default ListComponent;
+export default ListContainer;

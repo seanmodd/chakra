@@ -1,16 +1,15 @@
-/* eslint-disable react/prop-types */
 export const List = ({ items }) => (
   <div>
     {items.map((item) => (
-      <li key={item}>{`${item} wow this is the fucking future`}</li>
+      <li key={item.id}>{item}</li>
     ))}
   </div>
-)
-
+);
 const ListContainer = () => (
   <div>
-    <List items={['one', 'two', 'three']} />
+    <List items={['one', 'two', 'threeMOTHERFUCKERS']} />
   </div>
 );
 
 export default ListContainer;
+
