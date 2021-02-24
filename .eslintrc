@@ -1,8 +1,8 @@
 {
-    "extends": [
-        "wesbos"
-    ],
-    "rules": {
-        "no-unused-vars": 1
-    }
+  "extends": [
+      "wesbos"
+  ],
+  "rules": {
+      "no-unused-vars": 1
+  }
 }

@@ -5,7 +5,8 @@
         "parent_id": null,
         "workspaceRoot": null,
         "workspacePath": null,
-        "id": "oIaR5eZLGr4hmw2i"
+        "id": "oIaR5eZLGr4hmw2i",
+        "iconColor": "rgb(0, 255, 255)"
     },
     {
         "type": "File",
@@ -15,5 +16,23 @@
         "workspaceRoot": null,
         "workspacePath": null,
         "id": "RJN6TrL17cVHM42l"
+    },
+    {
+        "type": "Group",
+        "name": "settings.json",
+        "parent_id": null,
+        "workspaceRoot": null,
+        "workspacePath": null,
+        "id": "8tZdPcH9AobVFfqu",
+        "iconColor": "rgb(255, 0, 255)"
+    },
+    {
+        "type": "Directory",
+        "name": "/Users/seanmodd/Library/Application Support/Code/User/snippets",
+        "parent_id": "8tZdPcH9AobVFfqu",
+        "fsPath": "/Users/seanmodd/Library/Application Support/Code/User/snippets",
+        "workspaceRoot": null,
+        "workspacePath": null,
+        "id": "iAK3YkDPTZ4LfSXM"
     }
 ]

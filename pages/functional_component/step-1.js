@@ -9,19 +9,7 @@ const List = () => (
   </ul>
 );
 
-
-
 export default List;
-const step-1 = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
-
-export default step-1
-
 
 // ! STEP 2 •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 const ListStep2 = ({ items }) => (

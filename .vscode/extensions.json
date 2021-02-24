@@ -1,5 +1,7 @@
 {
     "recommendations": [
-        "dbankier.vscode-quick-select"
+        "dbankier.vscode-quick-select",
+        "ghmcadams.lintlens",
+        "yaksoy.maxlint"
     ]
 }

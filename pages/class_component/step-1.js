@@ -18,7 +18,7 @@ class List extends React.Component {
 export default List;
 
 // ! STEP 2 •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
-class ListStep4 extends React.Component {
+class ListStep2 extends React.Component {
   render() {
     return (
       <ul>
@@ -30,8 +30,8 @@ class ListStep4 extends React.Component {
   }
 }
 
-const ListStep4Container = () => (
-  <ListStep4 items={['Learn React', 'Learn Next.js', '???', 'Profit']} />
+const ListStep2Container = () => (
+  <ListStep2 items={['Learn React', 'Learn Next.js', '???', 'Profit']} />
 );
 
 // export default ListStep4Container;
