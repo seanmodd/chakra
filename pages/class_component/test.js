@@ -1,37 +1,36 @@
 import React, { Component } from 'react';
 
-
 class List extends React.Component {
+  constructor(props) {
+    super(props);
 
-    // constructor(props) {
-    //     super(props);
-    
-    //     this.state = {
-    //       filteredItems: this.props.items,
-    //     };
-    
-    //     // This binding is necessary to make `this` work in the callback
-    //     this.filterItems = this.filterItems.bind(this);
-    //   }
-    
-    //   filterItems(e) {
-    //     const searchValue = e.target.value;
-    //     const currentItems = [...this.props.items];
-    //     const matchingItems = currentItems.filter((item) =>
-    //       item.startsWith(searchValue)
-    //     );
-    
-    //     this.setState({
-    //       filteredItems: matchingItems,
-    //     });
-    //   }
+    this.state = {
+      count: 15,
+    };
+  }
+
+  increment() {
+    this.state.count = this.state.count + 1;
+    console.log(this.state.count);
+  }
+
   render() {
     return (
-      <ul>
-        {this.props.items.map((item) => (
-          <li key={item}>{item}</li>
-        ))}
-      </ul>
+      <>
+        <ul>
+          {this.props.items.map((item) => (
+            <li key={item}>
+              {item}
+              {' ...hey so the count is... = '}
+
+              {this.state.count}
+            </li>
+          ))}
+        </ul>
+        <div align="center">
+          <button onClick={() => this.increment()}>Increment!</button>
+        </div>
+      </>
     );
   }
 }
