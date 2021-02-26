@@ -1,41 +1,68 @@
 import React, { Component } from 'react';
+import {
+  useColorMode,
+  Heading,
+  Text,
+  Flex,
+  Stack,
+  Accordion,
+  Button,
+  FormControl,
+  FormLabel,
+  FormErrorMessage,
+  FormHelperText,
+  Wrap,
+  WrapItem,
+  VStack,
+  Input,
+  Box,
+} from '@chakra-ui/react';
 
-class List extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      count: 15,
-    };
-  }
-
-  increment() {
-    this.state.count = this.state.count + 1;
-    console.log(this.state.count);
-  }
-
+class List extends Component {
   render() {
     return (
       <>
-        <ul>
-          {this.props.items.map((item) => (
-            <li key={item}>
-              {item}
-              {' ...hey so the count is... = '}
-
-              {this.state.count}
-            </li>
-          ))}
-        </ul>
-        <div align="center">
-          <button onClick={() => this.increment()}>Increment!</button>
-        </div>
+        <VStack bg="gray.200" h="100vh">
+          <Stack align="center" mt={20} w="50%" rounded="2xl" mb={20}>
+            {this.props.items.map((item) => (
+              <Box
+                align="center"
+                borderRadius="xl"
+                bg="red.200"
+                w="500px"
+                align="center"
+                textAlign="center"
+                justifyContent="center"
+                h="60px"
+                shadow="md"
+                my={5}
+                key={item.id}
+              >
+                <Heading mt={1.5}>{item}</Heading>
+              </Box>
+            ))}
+          </Stack>
+          <Box bg="gray.200" h="auto" w="100vw" align="center">
+            <FormControl>
+              <Stack w="50%" align="center">
+                <Input shadow="md" bg="white" w="110" type="text" />
+                <Input bg="white" w="110" type="text" />
+                <Button shadow="md" h="50px" w="100px" type="submit">
+                  <Heading fontSize="20px">submit</Heading>
+                </Button>
+              </Stack>
+            </FormControl>
+          </Box>
+        </VStack>
       </>
     );
   }
 }
 
-const ListContainer = () => (
-  <List items={['motherfuckeriam here', 'and now im here', 'hey']} />
+const ListComponent = () => (
+  <div>
+    <List items={['one', 'two', 'THREEEEMOTHERFUCKERS']} />
+  </div>
 );
-export default ListContainer;
+
+export default ListComponent;

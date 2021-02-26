@@ -13,6 +13,7 @@ const GlobalStyle = ({ children }) => {
   return (
     <>
       <Global
+      
         styles={css`
           ::selection {
             background-color: #90cdf4;
