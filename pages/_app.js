@@ -3,9 +3,11 @@ import {
   ColorModeProvider,
   useColorMode,
 } from '@chakra-ui/react';
-import { Global, css } from '@emotion/react';
+
+import { jsx, ThemeProvider, useTheme, Global, css } from '@emotion/react';
+
+import preset from '@rebass/preset';
 import customTheme from '../styles/theme.js';
-import '../styles/globals.css';
 
 const GlobalStyle = ({ children }) => {
   const { colorMode } = useColorMode();
@@ -13,7 +15,6 @@ const GlobalStyle = ({ children }) => {
   return (
     <>
       <Global
-      
         styles={css`
           ::selection {
             background-color: #90cdf4;
@@ -50,6 +51,7 @@ function MyApp({ Component, pageProps }) {
             useSystemColorMode: true,
           }}
         />
+        <ThemeProvider theme={preset} />
 
         <GlobalStyle>
           <Component {...pageProps} />

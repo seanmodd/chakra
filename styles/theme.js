@@ -3,8 +3,8 @@ import { createBreakpoints } from '@chakra-ui/theme-tools';
 
 const fonts = {
   ...chakraTheme.fonts,
-  body: `Inter`,
-  heading: `Inter`,
+  body: `Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"`,
+  heading: `Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"`,
 };
 
 const breakpoints = createBreakpoints({
@@ -16,7 +16,7 @@ const breakpoints = createBreakpoints({
 const fontWeights = {
   normal: 300,
   medium: 600,
-  bold: 700,
+  bold: 800,
 };
 
 const fontSizes = {
