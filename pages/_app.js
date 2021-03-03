@@ -2,6 +2,7 @@ import {
   ChakraProvider,
   ColorModeProvider,
   useColorMode,
+  Flex,
 } from '@chakra-ui/react';
 
 import { jsx, ThemeProvider, useTheme, Global, css } from '@emotion/react';
@@ -44,19 +45,24 @@ const GlobalStyle = ({ children }) => {
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <ChakraProvider resetCSS theme={customTheme}>
-        <ColorModeProvider
-          options={{
-            initialColorMode: 'light',
-            useSystemColorMode: true,
-          }}
-        />
-        <ThemeProvider theme={preset} />
-
-        <GlobalStyle>
-          <Component {...pageProps} />
-        </GlobalStyle>
-      </ChakraProvider>
+      <ThemeProvider theme={preset}>
+        <ChakraProvider resetCSS theme={customTheme}>
+          <Flex direction="column">
+            <ColorModeProvider
+              options={{
+                initialColorMode: 'light',
+                useSystemColorMode: true,
+              }}
+            >
+              {/* <Flex justify="center" align="center" w="100%" h="93vh"> */}
+              <GlobalStyle>
+                <Component {...pageProps} />
+              </GlobalStyle>
+              {/* </Flex> */}
+            </ColorModeProvider>
+          </Flex>
+        </ChakraProvider>
+      </ThemeProvider>
     </>
   );
 }

@@ -1,17 +1,5 @@
 import React from 'react';
-import {
-  useColorMode,
-  Button,
-  Flex,
-  Box,
-  Textarea,
-  FormControl,
-  FormLabel,
-  Input,
-  FormHelperText,
-  FormErrorMessage,
-  IconButton,
-} from '@chakra-ui/react';
+import { useColorMode, Button, Flex, Box } from '@chakra-ui/react';
 import NextLink from 'next/link';
 import styled from '@emotion/styled';
 
@@ -56,7 +44,7 @@ const Container = ({ children }) => {
         bg={bgColor[colorMode]}
         as="nav"
         px={[2, 6, 6]}
-        py={2}
+        // py={2}
         mt={8}
         mb={[0, 0, 8]}
         mx="auto"
@@ -119,14 +107,14 @@ const Container = ({ children }) => {
         opacity={1}
         minHeight="200px"
       >
-        <FormControl className="SEANFORM" maxWidth="500px">
+        {/* <FormControl className="SEANFORM" maxWidth="500px">
           <FormLabel>Label</FormLabel>
           <Input />
           <Textarea mt={2} backgroundColor="cyan.500" />
           <FormHelperText>Helper message</FormHelperText>
           <FormErrorMessage>Error message</FormErrorMessage>
         </FormControl>
-        <IconButton aria-label="icon" icon="copy" />
+        <IconButton aria-label="icon" icon="copy" /> */}
       </Flex>
     </div>
   );

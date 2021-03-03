@@ -1,15 +1,6 @@
 import Head from 'next/head';
-import {
-  useColorMode,
-  Heading,
-  Text,
-  Flex,
-  Stack,
-  Accordion,
-  Box,
-} from '@chakra-ui/react';
 import React from 'react';
-
+import ListContainer from '../components/functional_component/step-4';
 import Container from '../components/Container';
 
 export default function Sean() {
@@ -19,6 +10,7 @@ export default function Sean() {
         <Head>
           <title>Sean Modd motherfuckers</title>
         </Head>
+        <ListContainer />
       </Container>
     </>
   );
