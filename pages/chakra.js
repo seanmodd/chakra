@@ -8,7 +8,7 @@ import {
 } from '@chakra-ui/react';
 import * as React from 'react';
 
-export const App = () => (
+const myChakra = () => (
   <Flex minH="100vh" direction={{ base: 'column', md: 'row' }}>
     <Box
       display={{ base: 'none', md: 'block' }}
@@ -103,3 +103,4 @@ export const App = () => (
     </Box>
   </Flex>
 );
+export default myChakra;
